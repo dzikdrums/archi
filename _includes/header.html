@@ -1,0 +1,46 @@
+<header id=header class="header">
+    <nav class='desktop'>
+        <ul>
+            {% for post in page.nav-left %}
+            <li class='nav-item'>
+                <a href="{{post.link}}">
+                    {{post.title}}
+                    <img class='star' src='/assets/img/star.svg' />
+                </a>
+            </li>
+            {% endfor %}
+            <li>
+                <div class='img-wrapper'>
+                    <a href="/"><img src="/assets/img/logo.jpg"></a>
+                </div>
+            </li>
+            {% for post in page.nav-right %}
+            <li class='nav-item'>
+                <a href="{{post.link}}">
+                    {{post.title}}
+                    <img class='star' src='/assets/img/star.svg' />
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <nav class='mobile'>
+        <ul>
+            <li>
+                <button class='phone' id='phone'>
+                    <img src='/assets/img/footer_phone.svg' />
+                </button>
+            </li>
+            <li>
+                <div class='img-wrapper'>
+                    <a href="/"><img src="/assets/img/mobile_logo.jpg"></a>
+                </div>
+            </li>
+            <li>
+                <button class='burger' id='burger'>
+                    <img src="/assets/img/burger_menu.svg">
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
