@@ -4,6 +4,7 @@
 <link rel='stylesheet' type='text/css' href="{{ site.baseUrl }}/assets/css/styles.css">
 
 {% include header.html %}
+{% include mobileMenu.html %}
 
 <div class='hero-image' style='background-image: url(/assets/img/hero_image.jpg)'>
     <div class='svg-wrapper'>
@@ -88,27 +89,30 @@
 </section>
 <section class='whatWeDid' style='background-image: url(/assets/img/Ola&PiotrFilter.jpg)'>
     <ul>
-
-        <li class='perks'>
-            <img src='/assets/img/camera.svg' />
-            <p class='counter'>108</p>
-            <p class='name'>zrealizowanych filmów</p>
-        </li>
-        <li class='perks'>
-            <img src='/assets/img/photo.svg' />
-            <p class='counter'>119</p>
-            <p class='name'>wyjątkowych reportaży ślubnych</p>
-        </li>
-        <li class='perks'>
-            <img src='/assets/img/clients.svg' />
-            <p class='counter'>248</p>
-            <p class='name'>zadowolonych klientów</p>
-        </li>
-        <li class='perks'>
-            <img src='/assets/img/hours.svg' />
-            <p class='counter'>6914 h</p>
-            <p class='name'>spędzone na realizacji Waszych marzeń</p>
-        </li>
+        <div class='first-row row'>
+            <li class='perks'>
+                <img src='/assets/img/camera.svg' />
+                <p class='counter'>108</p>
+                <p class='name'>zrealizowanych filmów</p>
+            </li>
+            <li class='perks'>
+                <img src='/assets/img/photo.svg' />
+                <p class='counter'>119</p>
+                <p class='name'>wyjątkowych reportaży ślubnych</p>
+            </li>
+        </div>
+        <div class='second-row row '>
+            <li class='perks'>
+                <img src='/assets/img/clients.svg' />
+                <p class='counter'>248</p>
+                <p class='name'>zadowolonych klientów</p>
+            </li>
+            <li class='perks'>
+                <img src='/assets/img/hours.svg' />
+                <p class='counter'>6914 h</p>
+                <p class='name'>spędzone na realizacji Waszych marzeń</p>
+            </li>
+        </div>
     </ul>
 </section>
 <section class='dreams'>
@@ -205,46 +209,54 @@
             </div>
         </div>
         <div class='second-row'>
-            <a class='movie' href='/'>
-                <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
-                    <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                            <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
-                            <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z" fill="white" />
-                        </g>
-                    </svg>
-                </div>
-            </a>
-            <a class='movie' href='/'>
-                <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
-                    <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                            <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
-                            <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z" fill="white" />
-                        </g>
-                    </svg>
-                </div>
-            </a>
-            <a class='movie' href='/'>
-                <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
-                    <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                            <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
-                            <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z" fill="white" />
-                        </g>
-                    </svg>
-                </div>
-            </a>
-            <a class='movie last-child' href='/'>
-                <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
-                    <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                            <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
-                            <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z" fill="white" />
-                        </g>
-                    </svg>
-                </div>
-            </a>
+            <div class='row'>
+                <a class='movie' href='/'>
+                    <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
+                        <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.7">
+                                <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
+                                <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <a class='movie' href='/'>
+                    <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
+                        <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.7">
+                                <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
+                                <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class='row'>
+                <a class='movie' href='/'>
+                    <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
+                        <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.7">
+                                <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
+                                <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <a class='movie' href='/'>
+                    <div class='image-holder' style='background-image: url(/assets/img/movie_1.jpg)'>
+                        <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.7">
+                                <circle cx="40.5303" cy="40.4912" r="38.5" stroke="white" stroke-width="3" />
+                                <path d="M63.335 40.4912L29.1282 60.2405L29.1282 20.7419L63.335 40.4912Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class='btn-wrapper'>
@@ -309,7 +321,7 @@
             </ul>
         </div>
 
-        <div class='column left-column'>
+        <div class='column right-column'>
             <div class='column-header'>
                 <div class='text'>
                     <p class='title'>Foto</p>
@@ -362,7 +374,7 @@
             </div>
         </div>
         <div class='btn-wrapper'>
-            <a class='btn btn-gold' href='/'>Zobacz portfolio <svg width="31" height="8" viewBox="0 0 31 8" fill="none"
+            <a class='btn btn-gold' href='/'>Idź do formularza <svg width="31" height="8" viewBox="0 0 31 8" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M30.5523 4.18217C30.7475 3.98691 30.7475 3.67032 30.5523 3.47506L27.3703 0.293082C27.175 0.0978195 26.8585 0.0978195 26.6632 0.293082C26.4679 0.488344 26.4679 0.804926 26.6632 1.00019L29.4916 3.82862L26.6632 6.65704C26.4679 6.8523 26.4679 7.16889 26.6632 7.36415C26.8585 7.55941 27.175 7.55941 27.3703 7.36415L30.5523 4.18217ZM0.19873 4.32861L30.1987 4.32862L30.1987 3.32862L0.198731 3.32861L0.19873 4.32861Z"
@@ -474,5 +486,102 @@
             </svg></a>
     </div>
 </section>
-
 {% include footer.html %}
+
+<script>
+
+    console.clear();
+    // const matrix = [
+    //     [1, 2, 3],
+    //     [0, 5, 6, 4],
+    //     [9, 3, 4],
+    //     [7, 8, 9, 3],
+    //     [4, 4, 2, 9]
+    // ]
+    // let newMatrix = [...matrix.map(row => [...row])]; // copy arrays
+    // newMatrix
+    //     .forEach((row, i) => {
+    //         matrix[i].forEach((v, column) => {
+    //             if (v !== 0) {
+    //                 return;
+    //             }
+
+    //             newMatrix.forEach(row => {
+    //                 if (row[column] === 0) {
+    //                     return;
+    //                 }
+
+    //                 row[column] = 0;
+    //             })
+    //         })
+    //         if (matrix[i].includes(0)) {
+    //             row.fill(0);
+    //         }
+    //     })
+
+
+    // 1. Skopiuj Array
+    // 2. ForEach(row, i) po newMatrix
+    // 3. ForEach(v, column) po matrix[i]
+    // 4. If(v !== 0){ return }
+    // 5. ForEach(row) po newMatrix
+    // 6. If(row[column] === 0){ return }
+    // 7.row[column] = 0
+    // 8. if (matrix[i].includes(0)) { row.fill(0) }
+
+    // newMatrix = [...matrix.map(row => [...row])]
+
+    // newMatrix.forEach((row, i) => {
+    //     matrix[i].forEach((v, column) => {
+    //         if (v !== 0) {
+    //             return
+    //         }
+
+    //         newMatrix.forEach((row) => {
+    //             if (row[column] === 0) {
+    //                 return
+    //             }
+    //             row[column] = 0
+    //         })
+    //     })
+    //     if (matrix[i].includes(0)) {
+    //         row.fill(0)
+    //     }
+    // })
+
+    // newMatrix.forEach(el => console.log(el));
+
+
+    const matrix = [
+        [1, 2, 3],
+        [0, 5, 6, 4],
+        [9, 3, 4],
+        [7, 8, 9, 3],
+        [4, 4, 2, 9]
+    ]
+
+    const newMatrix
+
+    // const newMatrix = [...matrix.map(row => [...row])]
+
+    // newMatrix.forEach((row, i) => {
+    //     matrix[i].forEach((v, column) => {
+    //         if (v !== 0) {
+    //             return
+    //         }
+
+    //         newMatrix.forEach((row) => {
+    //             if (row[column] === 0) {
+    //                 return
+    //             }
+    //             row[column] = 0
+    //         })
+    //     })
+    //     if (matrix[i].includes(0)) {
+    //         row.fill(0)
+    //     }
+    // })
+
+    // newMatrix.forEach(row => console.log(row))
+
+</script>

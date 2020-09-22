@@ -280,7 +280,56 @@ h4, .h4
         .mobile
             display: block
 
-// @media (max-width:450px)
+//  MOBILE MENU
+
+.mobileMenu-wrapper
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 120%
+    z-index: 10
+    background-color: white
+    box-shadow: -1px 0 30px rgba(1, 5, 12, 0.1)
+    padding: 19px 9px 48px 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: 0.2s
+
+    &.open
+        left: 20%
+
+    .top
+        .btn-wrapper
+            display: flex
+            justify-content: flex-end
+
+        .mobileMenu
+            padding-top: 25px
+
+            ul
+                li
+                    a
+                        font-size: 16px
+                        line-height: 19.5px
+                        color: 8d96a3
+                        display: flex
+                        padding-bottom: 25px
+
+                        img
+                            display: none
+                            margin-left: 8px
+
+                        &.active
+                            color: dbb64d
+
+                            img
+                                display: block
+
+    .logo-wrapper
+        display: flex
+        justify-content: center
 
 // HERO SECTION
 .hero-image
@@ -388,50 +437,61 @@ h4, .h4
 
     ul
         display: flex
-        justify-content: space-around
+        justify-content: space-between
 
-        .perks
-            z-index: 2
+        .row
             display: flex
-            flex-direction: column
-            justify-content: center
+            flex-basis: 50%
+            justify-content: space-around
 
-            p
-                color: #182D47
-                text-align: center
+            .perks
+                z-index: 2
+                display: flex
+                flex-direction: column
+                justify-content: center
 
-                &.counter
-                    text-align: center
-                    font-weight: 800
-                    font-size: 50px
-                    line-height: 60px
+                p
                     color: #182D47
-                    padding-top: 25px
+                    text-align: center
 
-                &.name
-                    padding-top: 8px
-                    font-size: 20px
-                    font-weight: 500
-                    line-height: 28px
-                    max-width: 230px
+                    &.counter
+                        text-align: center
+                        font-weight: 800
+                        font-size: 50px
+                        line-height: 60px
+                        color: #182D47
+                        padding-top: 25px
+
+                    &.name
+                        padding-top: 8px
+                        font-size: 20px
+                        font-weight: 500
+                        line-height: 28px
+                        max-width: 230px
 
     @media (max-width:950px)
         padding: 66px 45px
 
         ul
             flex-wrap: wrap
+            flex-direction: column
 
-            .perks
-                max-width: 150px
+            .row
 
-                p
-                    &.counter
-                        font-size: 28px
-                        line-height: 34px
+                &.first-row
+                    margin-bottom: 49px
 
-                    &.name
-                        font-size: 12px
-                        line-height: 18px
+                .perks
+                    max-width: 150px
+
+                    p
+                        &.counter
+                            font-size: 28px
+                            line-height: 34px
+
+                        &.name
+                            font-size: 12px
+                            line-height: 18px
 
 .dreams
     display: flex
@@ -523,28 +583,61 @@ h4, .h4
             padding-top: 20px
             display: flex
 
-            .movie
-                position: relative
-                display: block
-                flex: 1
-                height: 180px
-                margin-right: 10px
+            .row
+                display: flex
+                width: 100%
 
-                .image-holder
-                    height: 100%
+                .movie
+                    position: relative
+                    display: block
+                    flex: 1
+                    height: 180px
+                    margin-right: 10px
+
+                    .image-holder
+                        height: 100%
+                        width: 100%
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: cover
+
+                    svg
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+
+                    &.last-child
+                        margin-right: 0
+
+    @media (max-width:950px)
+        padding-bottom: 82px
+
+        .img-wrapper
+            padding: 40px 0
+
+            .first-row
+                flex-direction: column
+
+                .column
                     width: 100%
-                    background-position: center
-                    background-repeat: no-repeat
-                    background-size: cover
+                    flex-basis: 100%
 
-                svg
-                    position: absolute
-                    top: 50%
-                    left: 50%
-                    transform: translate(-50%, -50%)
+                    &.right-column
+                        padding-top: 10px
 
-                &.last-child
-                    margin-right: 0
+                    .bottom-row
+                        padding-top: 10px
+
+                        .first-image
+                            margin-right: 10px
+
+            .second-row
+                padding-top: 0
+                flex-direction: column
+
+                .row
+                    padding-top: 10px
 
 .offer
     .columns-wrapper
@@ -636,6 +729,74 @@ h4, .h4
         .btn-wrapper
             margin-top: 50px
 
+    @media (max-width:950px)
+        .columns-wrapper
+            padding: 34px 15px 15px
+            flex-direction: column
+
+            .column
+                padding: 40px 30px
+
+                .column-header
+                    margin-bottom: 30px
+
+                    .text
+                        .title
+                            font-size: 28px
+                            line-height: 34px
+                        .description
+                            font-size: 16px
+                            line-height: 19.5px
+
+                .left-column
+                    margin-bottom: 10px
+
+                ul
+                    li
+                        margin-bottom: 27px
+
+                        .title
+                            font-size: 16px
+                            line-height: 19.5px
+
+                        .description
+                            font-size: 14px
+                            line-height: 20px
+
+        .info-bar
+            margin: 0 15px 34px
+
+            p
+                font-size: 14px
+                line-height: 24px
+
+        .wedding-date
+            margin: 0 15px 83px
+            flex-direction: column
+
+            .btn-wrapper
+                display: flex
+                justify-content: center
+
+            .wedding-date-header
+                margin: 0
+                flex-direction: column
+
+                .star
+                    margin-bottom: 34px
+
+                .text
+                    p
+                        text-align: center
+
+                    .title
+                        font-size: 20px
+                        line-height: 24px
+
+                    .description
+                        font-size: 14px
+                        line-height: 26px
+
 .happy-clients
     .columns
         padding: 46px 83px 90px
@@ -697,6 +858,16 @@ h4, .h4
                         &.active
                             color: dbb64d
 
+    @media (max-width:950px)
+        .columns
+            flex-direction: column
+            padding: 30px 15px
+
+            .right-column
+                .pagination
+                    display: flex
+                    justify-content: center
+
 .blog
     margin-bottom: 74px
     .posts-wrapper
@@ -750,6 +921,18 @@ h4, .h4
     .btn-wrapper
         display: flex
         justify-content: center
+
+    @media (max-width:950px)
+        margin-bottom: 15px
+        .posts-wrapper
+            padding: 30px 15px
+            flex-direction: column
+
+            .post-card
+                margin-bottom: 26px
+
+        .btn-wrapper
+            display: none
 
 .footer
     background-color: #f8f8f9

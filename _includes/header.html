@@ -44,3 +44,20 @@
         </ul>
     </nav>
 </header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.querySelector("#burger"),
+            mobileMenu = document.querySelector("#mobileMenu"),
+            mobileClose = document.querySelector('#mobile-close');
+
+
+        mobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.add('open')
+        });
+        mobileClose.addEventListener("click", function () {
+            mobileMenu.classList.remove('open')
+        });
+    })
+
+</script>
